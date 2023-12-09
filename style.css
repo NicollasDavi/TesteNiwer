@@ -50,6 +50,6 @@ header #img-header img{
 
 @media (max-width: 400px){
     #one-page{
-        height: 20vH;
+        height: 40vH;
     }
 }
