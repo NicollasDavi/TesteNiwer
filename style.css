@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: 'IBM Plex Mono', monospace;
 }
+
 html, body {
     overflow-x: hidden;
 }
 
-header{
+header {
     width: 100vw;
     height: 70px;
     background-color: rgba(0, 0, 0, 0.577);
@@ -16,23 +18,23 @@ header{
     position: fixed;
     z-index: 9999;
 }
-#img-header{
+
+#img-header {
     position: relative;
     height: 100%;
     width: 30%;
 }
 
-header #img-header img{
+header #img-header img {
     width: 15%;
     position: absolute;
     height: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
-#one-page{
+#one-page {
     width: 100vw;
     height: 80vH;
     position: relative;
@@ -42,7 +44,7 @@ header #img-header img{
     background-repeat: no-repeat;
 }
 
-#one-page img{
+#one-page img {
     position: absolute;
     width: 50%;
     top: 55%;
@@ -50,68 +52,160 @@ header #img-header img{
     transform: translate(-50%, -50%);
 }
 
-@media (min-width: 801px){
-    .navigation{
+
+@media (min-width: 801px) {
+    .navigation {
         margin-top: 32.5px;
         position: absolute;
         right: 100px;
     }
-    .navigation ul{
+
+    .navigation ul {
         display: flex;
     }
-    
-    
-    .navigation ul li{
+
+    .navigation ul li {
         list-style: none;
         width: 100%;
     }
-    
-    .navigation ul li a{
+
+    .navigation ul li a {
         text-decoration: none;
         color: #fff;
     }
-    
-    .navigation ul li a .icon i{
-    display: none;}
-    
-    .navigation ul li a .title{
+
+    .navigation ul li a .icon i {
+        display: none;
+    }
+
+    .navigation ul li a .title {
         margin: 15px 40px 0 15px;
         font-size: 1.1em;
     }
+    #contain {
+        background-image: linear-gradient(#050125, #0501257f);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #contact-page {
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 100%;
+        max-width: 700px;
+        transition: transform 0.3s;
+    }
+    
+    #contact-page:hover {
+        transform: scale(1.02);
+    }
+    
+    #contact-page h1 {
+        color: #753bbd;
+    }
+    
+    #formContain {
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+    }
+    
+    #containflex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .nameEmailContain {
+        width: calc(48% - 10px); /* Ajuste aqui */
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+    
+    input,
+    textarea {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+    }
+    
+    
+    input:focus,
+    textarea:focus {
+        border-color: #753bbd;
+    }
+    
+    textarea {
+        height: 100px;
+    }
+    
+    button {
+        border: none;
+        background-image: linear-gradient(#753bbd, #5a2d87);
+        color: #fff;
+        width: calc(100% - 20%);
+        padding: 10px;
+        font-size: 1.3em;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-image 0.3s;
+    }
+    
+    button:hover {
+        background-image: linear-gradient(#5a2d87, #753bbd);
+    }
+    
 }
 
-#second-page{
+#second-page {
     width: 100vw;
     height: 85vh;
     background-color: #050125;
     text-align: center;
 }
 
-.titlepages{
+.titlepages {
     color: #fff;
     font-size: 2.3em;
     padding: 60px 0 0 0;
 }
 
-#text-sobre{
+#text-sobre {
     margin: 30px 100px 0 100px;
     color: #fff;
     line-height: 1.5em;
     width: 50vw;
     font-size: 1.3em;
+    height: auto;
 }
-#second-contain{
+
+#second-contain {
     display: flex;
     align-items: center;
 }
-hr{
+
+hr {
     background-color: #753bbd;
     border: 2px solid #753bbd;
     width: 25%;
     margin: auto;
 }
 
-#globo{
+#globo {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -121,15 +215,16 @@ hr{
     box-shadow: -25px -25px 25px black inset, 5px 5px 20px #fff inset;
     margin: 0 0 0 50px;
 }
-#third-page{
+
+#third-page {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(#0501257f, #050125 );
-
+    background-image: linear-gradient(#0501257f, #050125);
 }
-.cardCarussel{
+
+.cardCarussel {
     width: 80px;
     height: 60%;
     background-color: #753bbd;
@@ -138,28 +233,31 @@ hr{
     transition: width 0.5s;
 }
 
-.cardCarussel.active{
-    width: 60vw;
-}
-.cardCarussel:hover{
+.cardCarussel.active {
     width: 60vw;
 }
 
-#card1{
+.cardCarussel:hover {
+    width: 60vw;
+}
+
+#card1 {
     background-image: url(web.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
 }
-#card2{
+
+#card2 {
     background-image: url(mobile.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
 }
-#card3{
+
+#card3 {
     background-image: url(sistema.png);
     background-size: cover;
     background-position: center;
@@ -167,12 +265,13 @@ hr{
     background-color: transparent;
 }
 
-#forth-page{
+#forth-page {
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(#050125, #0501257f);
     text-align: center;
 }
+
 #grid-contain {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -201,22 +300,22 @@ hr{
     justify-content: center;
 }
 
-
-
-
-
-@keyframes rotate{
-    to{background-position: 100%;}
-
+@keyframes rotate {
+    to {
+        background-position: 100%;
+    }
 }
-@media (max-width: 800px){
-    #one-page{
+
+@media (max-width: 800px) {
+    #one-page {
         height: 50vH;
     }
-    #img-header{
+
+    #img-header {
         width: 50%;
     }
-    .navigation{
+
+    .navigation {
         position: absolute;
         top: 15px;
         right: 20px;
@@ -227,15 +326,17 @@ hr{
         border-radius: 4px;
         overflow: hidden;
         transition: width 0.5s, height 0.5s;
-        transition-delay: 0s,0.5s;
+        transition-delay: 0s, 0.5s;
     }
-    .navigation.active{
+
+    .navigation.active {
         width: 250px;
         height: 350px;
         transition: height 0.5s, width 0.5s;
-        transition-delay: 0s,0.5s;
+        transition-delay: 0s, 0.5s;
     }
-    .navigation .menuToggle{
+
+    .navigation .menuToggle {
         position: relative;
         top: 0;
         left: 0;
@@ -248,11 +349,12 @@ hr{
         transition: 0.5s;
         cursor: pointer;
     }
-    .navigation .menuToggle.active{
+
+    .navigation .menuToggle.active {
         background-color: #753bbd;
     }
-    
-    .navigation .menuToggle::before{
+
+    .navigation .menuToggle::before {
         content: '+';
         position: absolute;
         font-size: 2em;
@@ -265,94 +367,63 @@ hr{
         font-weight: 400;
         transform: 0.5s;
     }
-    
-    .navigation ul li{
+
+    .navigation ul li {
         position: relative;
         list-style: none;
         width: 100%;
     }
-    
-    .navigation ul li a{
+
+    .navigation ul li a {
         position: relative;
         display: flex;
         width: 100%;
         text-decoration: none;
         color: #753bbd;
     }
-    
-    .navigation ul li a .icon{
+
+    .navigation ul li a .icon {
         position: relative;
         min-width: 50px;
         height: 50px;
         text-align: center;
         line-height: 50px;
     }
-    
-    .navigation ul li a .icon i{
+
+    .navigation ul li a .icon i {
         font-size: 1.15em;
     }
-    
-    .navigation ul li a .title{
+
+    .navigation ul li a .title {
         position: relative;
         display: block;
         line-height: 50px;
         white-space: nowrap;
     }
 
-    #globocontain{
+    #globocontain {
         display: none;
     }
 
-    #text-sobre{
+    #text-sobre {
+        margin: 30px 0 0 0;
         width: 100vw;
-    }
-    .cardCarussel{
-        height: 50vh;
-    }
-    #third-page{
-        height: 80vh;
-    }
-    #card1, #card2, #card3{
-        background-size: contain;
-    }
-    
-}
-
-@media (max-width: 400px){
-    #img-header{
-        display: none;
-    }
-    #one-page{
-        height: 40vH;
-    }
-    #globocontain{
-        display: none;
-    }
-
-    #text-sobre{
-        width: 100vw;
-    }
-    .cardCarussel{
-        height: 50vh;
-        width: 30px;
-        margin: 0 5px 0 5px;
-    }
-    .cardCarussel.active{
-        width: 80vw;
-    }
-    #third-page{
-        height: 40vh;
-    }
-    #card1, #card2, #card3{
-        background-size: contain;
-    }
-    #text-sobre{
-        margin: 30px 7.5vw 0 7.5vw;
-        color: #fff;
-        line-height: 1.5em;
-        width: 85vw;
+        height: auto;
         font-size: 1em;
     }
+
+    .cardCarussel {
+        height: 50vh;
+    }
+
+    #third-page {
+        height: 80vh;
+    }
+
+    #card1, #card2, #card3 {
+        background-size: contain;
+    }
+
     #contain {
         background-image: linear-gradient(#050125, #0501257f);
         height: 100vh;
@@ -366,7 +437,7 @@ hr{
         background-color: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
-        width: 100%;
+        width: 80%;
         max-width: 600px;
         transition: transform 0.3s;
     }
@@ -386,13 +457,15 @@ hr{
     }
     
     #containflex {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
     
     .nameEmailContain {
-        width: 100%; /* Ajuste aqui */
+        width: calc(48% - 10px); /* Ajuste aqui */
         margin-bottom: 15px;
+        text-align: left;
     }
     
     label {
@@ -436,88 +509,131 @@ hr{
     button:hover {
         background-image: linear-gradient(#5a2d87, #753bbd);
     }
-}
-#contain {
-    background-image: linear-gradient(#050125, #0501257f);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
-#contact-page {
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 100%;
-    max-width: 600px;
-    transition: transform 0.3s;
-}
+@media (max-width: 400px) {
+    #img-header {
+        display: none;
+    }
 
-#contact-page:hover {
-    transform: scale(1.02);
-}
+    #one-page {
+        height: 40vH;
+    }
 
-#contact-page h1 {
-    color: #753bbd;
-}
+    #globocontain {
+        display: none;
+    }
 
-#formContain {
-    width: 90%;
-    margin: auto;
-    padding: 20px;
-}
+    #text-sobre {
+        width: 100vw;
+        height: auto;
+    }
 
-#containflex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+    .cardCarussel {
+        height: 50vh;
+        width: 30px;
+        margin: 0 5px 0 5px;
+    }
 
-.nameEmailContain {
-    width: calc(48% - 10px); /* Ajuste aqui */
-    margin-bottom: 15px;
-}
+    .cardCarussel.active {
+        width: 80vw;
+    }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-}
+    #third-page {
+        height: 40vh;
+    }
 
-input,
-textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    transition: border-color 0.3s;
-}
+    #card1, #card2, #card3 {
+        background-size: contain;
+    }
 
-input:focus,
-textarea:focus {
-    border-color: #753bbd;
-}
+    #text-sobre {
+        margin: 30px 7.5vw 0 7.5vw;
+        color: #fff;
+        line-height: 1.5em;
+        width: 85vw;
+        font-size: 1em;
+        height: auto;
+    }
 
-textarea {
-    height: 100px;
-}
+    #contain {
+        background-image: linear-gradient(#050125, #0501257f);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-button {
-    border: none;
-    background-image: linear-gradient(#753bbd, #5a2d87);
-    color: #fff;
-    width: calc(100% - 20%);
-    padding: 10px;
-    font-size: 1.3em;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-image 0.3s;
-}
+    #contact-page {
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        transition: transform 0.3s;
+    }
 
-button:hover {
-    background-image: linear-gradient(#5a2d87, #753bbd);
+    #contact-page:hover {
+        transform: scale(1.02);
+    }
+
+    #formContain {
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+    }
+
+    #containflex {
+        display: block !important;
+        justify-content: space-between;
+    }
+
+    .nameEmailContain {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    input,
+    textarea {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-color: #753bbd;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    button {
+        border: none;
+        background-image: linear-gradient(#753bbd, #5a2d87);
+        color: #fff;
+        width: calc(100% - 20%);
+        padding: 10px;
+        font-size: 1.3em;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-image 0.3s;
+    }
+
+    button:hover {
+        background-image: linear-gradient(#5a2d87, #753bbd);
+    }
 }
